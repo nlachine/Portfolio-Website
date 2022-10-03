@@ -1,0 +1,348 @@
+/* CSS RESET */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* CSS Starts Here */
+:root {
+  --col-royal: #2980b9;
+  --col-navy: #2b2b31;
+  --col-orange: #ff6138;
+  --col-yellow: #ffbe53;
+  --col-white: #f8f0e5;
+
+  --text-sm: 0.875rem;
+  --text-base: 1.125rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5rem;
+  --text-xl: 2rem;
+  --text-2x: 2.75rem;
+  --text-3x: 4rem;
+
+  --weight-light: 300;
+  --weight-reg: 400;
+  --weight-semi: 600;
+  --weight-bold: 700;
+
+  /* Hero Padding */
+  --hero-pad: 5rem;
+  --hero-link-pad: 2rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--col-navy);
+  background-color: var(--col-white);
+}
+
+/* Utility Classes */
+.text-sm {
+  font-size: var(--text-sm);
+  line-height: normal;
+}
+.text-base {
+  font-size: var(--text-base);
+  line-height: normal;
+}
+.text-md {
+  font-size: var(--text-md);
+  line-height: normal;
+}
+.text-lg {
+  font-size: var(--text-lg);
+  line-height: normal;
+}
+.text-xl {
+  font-size: var(--text-xl);
+  line-height: normal;
+}
+.text-2x {
+  font-size: var(--text-2x);
+  line-height: normal;
+}
+.text-3x {
+  font-size: var(--text-3x);
+  line-height: 3.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+
+.weight-light {
+  font-weight: var(--weight-light);
+}
+.weight-reg {
+  font-weight: var(--weight-reg);
+}
+.weight-semi {
+  font-weight: var(--weight-semi);
+}
+.weight-bold {
+  font-weight: var(--weight-bold);
+}
+
+.text-navy {
+  color: var(--col-navy);
+}
+.text-royal {
+  color: var(--col-royal);
+}
+.text-orange {
+  color: var(--col-orange);
+}
+.text-yellow {
+  color: var(--col-yellow);
+}
+.text-white {
+  color: var(--col-white);
+}
+.bg-navy {
+  background-color: var(--col-navy);
+}
+.bg-royal {
+  background-color: var(--col-royal);
+}
+.bg-orange {
+  background-color: var(--col-orange);
+}
+.bg-yellow {
+  background-color: var(--col-yellow);
+}
+.bg-white {
+  background-color: var(--col-white);
+}
+
+/* Custom CSS */
+body {
+  height: 200vh;
+}
+li > a,
+li > a:hover {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+/* Hero Nav Bar */
+.hero__content {
+  position: relative;
+  height: 100vh;
+}
+.hero__content::after {
+  content: "";
+  position: absolute;
+  top: var(--hero-pad);
+  left: var(--hero-pad);
+  right: var(--hero-pad);
+  bottom: var(--hero-pad);
+  border: 5px solid var(--col-white);
+  font-weight: bold;
+  z-index: 0;
+}
+.hero__content * {
+  z-index: 1;
+}
+.hero__content h2 {
+  position: absolute;
+  top: var(--hero-pad);
+  right: var(--hero-pad);
+  outline: 2rem solid var(--col-navy);
+}
+.hero__nav {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: var(--hero-pad);
+  left: var(--hero-pad);
+}
+.hero__nav h1 {
+  outline: 2rem solid var(--col-navy);
+  margin-right: var(--hero-pad);
+}
+.hero__nav > ul {
+  display: flex;
+  margin-bottom: -0.75rem;
+}
+.hero__nav li {
+  padding: 0 var(--hero-link-pad);
+  margin: 0 var(--hero-link-pad);
+  transition: 300ms;
+}
+.hero__nav li:hover {
+  transform: scale(1.1);
+  transition: 300ms;
+}
+
+@media only screen and (max-width: 1420px) {
+  :root {
+    --text-sm: calc(0.875rem * 0.8);
+    --text-base: calc(1.125rem * 0.8);
+    --text-md: calc(1.25rem * 0.8);
+    --text-lg: calc(1.5rem * 0.8);
+    --text-xl: calc(2rem * 0.8);
+    --text-2x: calc(2.75rem * 0.8);
+    --text-3x: calc(4rem * 0.8);
+
+    --hero-pad: 2rem;
+  }
+  .hero__nav {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .hero__nav h1 {
+    margin-top: var(--hero-pad);
+    margin-right: 0rem;
+  }
+  .hero__nav > ul {
+    flex-direction: column-reverse;
+    margin-left: -0.75rem;
+    margin-bottom: 0rem;
+  }
+
+  .hero__nav li {
+    padding: calc(var(--hero-link-pad) * 0.5) 0;
+    margin: calc(var(--hero-link-pad) * 0.5) 0;
+  }
+  .hero__nav li a {
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    transform: rotate(180deg);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+}
