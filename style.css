@@ -719,7 +719,7 @@ section > div
   font-size: var(--text-sm);
   padding: 0.25rem 0.5rem;
   background-color: rgba(var(--rgb-royal), 0.25);
-  width:max-content;
+  width: max-content;
 }
 
 /* Work Section */
