@@ -108,6 +108,9 @@ nav,
 section {
   display: block;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   line-height: 1;
 }
@@ -138,6 +141,12 @@ table {
   --col-red: #ff4242;
   --col-yellow: #ffbe53;
   --col-white: #f8f0e5;
+
+  --rgb-royal:41, 128, 185;
+  --rgb-navy: 43, 43, 49;
+  --rgb-red: 255, 66, 66;
+  --rgb-yellow: 255, 190, 83;
+  --rgb-white: 248, 240, 229;
 
   --text-sm: 0.875rem;
   --text-base: 1.125rem;
@@ -695,6 +704,22 @@ section > div
 .experiences__container {
   display: grid;
   gap: 2rem;
+}
+.experience__list{
+  list-style: square;
+  margin-left: 1rem;
+}
+
+.experience__tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.experience__tags li{
+  font-size: var(--text-sm);
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(var(--rgb-royal), 0.25);
+  width:max-content;
 }
 
 /* Work Section */
